@@ -1,6 +1,6 @@
 from langchain_classic.tools import BaseTool
 from pydantic import Field,BaseModel
-
+from typing import Type
 
 # arg schema using pydantic
 class MultiplyInput(BaseModel):
@@ -23,5 +23,4 @@ result = multiply_tool.invoke({'a':3, 'b':3})
 print(result)
 print(multiply_tool.name)
 print(multiply_tool.description)
-
 print(multiply_tool.args)
